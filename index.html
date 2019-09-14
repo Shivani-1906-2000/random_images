@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RANDOM IMAGES</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+
+<body>
+   
+<!--   heading starts here-->
+    <h1 class="starter-template m-3 p-5 text-light display-3"
+    style="background-color:mediumpurple;
+    opacity:0.9;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 20px;
+    text-decoration: underline;">RANDOM IMAGES</h1>
+<!--    heading ends here-->
+   
+
+<!--  button to display images starts-->
+<center><button class="btn btn-primary"
+    onclick="getpics()"
+    style="font-size:30px;
+    border-radius: 50px;">Show Image</button>
+</center>
+ 
+ 
+ <center>
+  <img class="m-3" src="Images/" alt="" id="Images"
+  height="400px"
+  width="900px"
+  style="border-radius: 90px;">
+   </center>
+<!--   images display ends-->
+
+
+
+<!--   java script code starts here-->
+<script>
+    
+    var Pics=new Array("Images/auto.jpg",
+                      "Images/bali.jpg",
+                      "Images/deer.jpg",
+                      "Images/elephant.jpg",
+                      "Images/home.jpg",
+                      "Images/lighthouse.jpg",
+                      "Images/polar-beer.jpg",
+                      "Images/snail.jpg",
+                      "Images/waterfall.jpg",
+                      "Images/chile.jpg",
+                      "Images/cycle.jpg",
+                      "Images/dalia.jpg",
+                      "Images/eagle.jpg",
+                      "Images/garlic.jpg",
+                      "Images/ibis.jpg",
+                      "Images/mushroom.jpg",
+                      "Images/rose.jpg",
+                      "Images/santorini.jpg",
+                      "Images/strawberry.jpg");
+    
+    
+    function getpics(){
+    var randomNum=Math.floor(Math.random()*Pics.length);
+	document.getElementById("Images").src=Pics[randomNum];
+    }
+</script>
+<!-- java script code ends here-->
+    
+    
+
+
+</body>
+</html>
